@@ -29,3 +29,23 @@ export default class Cachorro extends Animal{
     }
 }
 
+export class Gato extends Animal{
+    falar(){
+        console.log(this.especie + ' fala Miau')
+    }
+
+    comer(){
+        console.log(this.especie + ' come peixe ')
+    }
+}
+
+export class Passaro extends Animal{
+    falar(){
+        console.log(this.especie + ' fala Piu Piu')
+    }
+
+    comer(){
+        console.log(this.especie + ' come Alpiste ')
+    }
+}
+

@@ -19,51 +19,17 @@ car01["marca"] = "fiat"
 const car02 = new Object()
 car02.marca = "ford"
 
-console.log(Object.keys(user01))
-console.log(Object.keys(user02))
-console.log(Object.keys(user03))
-console.log(Object.keys(car01))
-console.log(Object.keys(car02))
+const tesla = new Object()
+tesla.marca = "Tesla"
+tesla.dono = "Joao"
+tesla.ano = 2022
+tesla.motor = "Eletrico"
 
-// console.log(Object.values(user01))
-// console.log(Object.values(user02))
-// console.log(Object.values(user03))
-
-console.log(Object.entries(user01))
-// console.log(Object.entries(user02))
-// console.log(Object.entries(user03))
-
-user01.idade = user01.idade + 1
-
-console.log(Object.entries(user01))
-
-Object.defineProperty(user01, 'cpf', {
-    enumerable: true,
-    writable: false,
-    value: '000.000.000-00'
-})
-
-user01.cpf = '111.111.111-11'
-
-console.log(Object.entries(user01))
-
-console.log(user01)
-
-const empresa = "EBAC"
-
-user01.empresa = empresa
-user02.empresa = empresa
-user03.empresa = "Google"
-
-console.log(user01)
-console.log(user02)
-console.log(user03)
-
-user01.filhos = { 
-    filho01 : "Matheus",
-    filho02 : "Carol" 
+const FordF150 = {
+    marca : "Ford",
+    dono : "Joao",
+    ano : 2022,
+    motor : "Combustao"
 }
 
-console.log(user01)
-
-console.log(Object.entries(user01.filhos))
+console.log(FordF150)

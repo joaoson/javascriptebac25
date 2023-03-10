@@ -1,28 +1,32 @@
-function calcularMedia( notas ) {
-
-    let soma = 0;
-    for( c = 0; c < notas.length; c++) {
-        soma += notas[c];
+class calculadora {
+	constructor(notas){
+        this.notas = notas
     }
 
-    media = soma / notas.length;
+  media() {
+  	let valores = this.notas;
+    let media = 0;
+		let c = 0;
+    let soma = 0;
+    for (c = 0; c < valores.length; c++) {
+      soma += valores[c];
+    }
 
-    return media;
-
+    media = soma / valores.length;
+    
+    return media
+  }
+  
+  aprovacao(){
+  	let valor = this.media()
+  	if(valor>=60){
+    	return "Aprovado"
+    }
+    else{
+    	return "Reprovado"
+    }
+  }
 }
-
-let media; // escopo global
-
-function aprovacao( notas ) {
-
-    let media = calcularMedia( notas ); // escopo da função
-
-    let condicao = media >= 8 ? "aprovado" : "reprovado";
-
-    return 'Média: ' + media + ' - Resultado: ' + condicao;
-
-}
-
 
 // Função Recursivas
 
@@ -42,7 +46,7 @@ function contagemRegressiva(numero){
 /* 
  * Formulário envio de dados para cálculo da média 
  */
-const formulario1 = document.getElementById('formulario-01');
+//const formulario1 = document.getElementById('formulario-01');
 
 if(formulario1)
     formulario1.addEventListener('submit', function( evento ){
@@ -145,9 +149,9 @@ function validaEmail(elemento){
 }
 
 
-let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-let camposNumericos = document.querySelectorAll('input.numero');
-let camposEmail = document.querySelectorAll('input.email');
+//let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+//let camposNumericos = document.querySelectorAll('input.numero');
+//let camposEmail = document.querySelectorAll('input.email');
 
 for( let emFoco of camposObrigatorios) {
     validaCampo(emFoco);
